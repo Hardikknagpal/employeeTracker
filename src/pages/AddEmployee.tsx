@@ -30,12 +30,27 @@ const AddEmployee: React.FC = () => {
   const [role, setRole] = useState("")
   const [isPresent, setIsPresent] = useState(false)
   const [showToast, setShowToast] = useState(false)
+  const isValidEmail = (email: string) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+
+const isValidPhone = (phone: string) =>
+  /^[6-9]\d{9}$/.test(phone)
 
   const history = useHistory()
 
   const handleSave = async () => {
     if (!name || !email || !phone || !role) {
       alert("Please fill all fields")
+      return
+    }
+
+    if(!isValidEmail(email)){
+      alert("Please enter a valid email")
+      return
+    }
+
+    if(!isValidPhone(phone)){
+      alert("Please enter a valid phone number")
       return
     }
 

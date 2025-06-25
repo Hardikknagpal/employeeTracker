@@ -41,7 +41,7 @@ import {
   MoreVertical,
   Edit,
   Trash2,
-  Eye,
+  Eye,  
 } from "lucide-react"
 
 const EmployeeList: React.FC = () => {
@@ -65,7 +65,7 @@ const EmployeeList: React.FC = () => {
 
   useEffect(() => {
     fetchEmployees()
-  }, [])
+  })
 
   useEffect(() => {
     filterEmployees()
