@@ -1,0 +1,7 @@
+{
+  "name": "employeeTracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
